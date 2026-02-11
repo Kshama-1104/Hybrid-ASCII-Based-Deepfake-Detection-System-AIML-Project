@@ -1,0 +1,145 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 320" width="900" height="320">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#060d18"/>
+      <stop offset="100%" style="stop-color:#0a0f1e"/>
+    </linearGradient>
+    <linearGradient id="bar1" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#00e5ff"/>
+      <stop offset="100%" style="stop-color:#0077aa"/>
+    </linearGradient>
+    <linearGradient id="bar2" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#aa44ff"/>
+      <stop offset="100%" style="stop-color:#5500aa"/>
+    </linearGradient>
+    <linearGradient id="bar3" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#00ff88"/>
+      <stop offset="100%" style="stop-color:#006633"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="2" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <pattern id="dots" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
+      <circle cx="10" cy="10" r="0.6" fill="rgba(0,229,255,0.06)"/>
+    </pattern>
+  </defs>
+
+  <rect width="900" height="320" rx="12" fill="url(#bg)"/>
+  <rect width="900" height="320" rx="12" fill="url(#dots)"/>
+  <rect x="1" y="1" width="898" height="318" rx="12" fill="none" stroke="rgba(0,229,255,0.2)" stroke-width="1"/>
+
+  <!-- Title -->
+  <text x="450" y="36" text-anchor="middle" font-family="'Arial Black', sans-serif" font-size="14" font-weight="900" fill="#00e5ff" filter="url(#glow)" letter-spacing="4">PERFORMANCE METRICS</text>
+  <line x1="100" y1="46" x2="800" y2="46" stroke="rgba(0,229,255,0.15)" stroke-width="0.5"/>
+
+  <!-- === LEFT: BAR CHART === -->
+  <!-- Y-axis line -->
+  <line x1="130" y1="65" x2="130" y2="252" stroke="rgba(0,229,255,0.3)" stroke-width="1"/>
+  <!-- X-axis line -->
+  <line x1="130" y1="252" x2="440" y2="252" stroke="rgba(0,229,255,0.3)" stroke-width="1"/>
+
+  <!-- Grid lines -->
+  <line x1="130" y1="205" x2="440" y2="205" stroke="rgba(0,229,255,0.08)" stroke-width="0.5"/>
+  <line x1="130" y1="158" x2="440" y2="158" stroke="rgba(0,229,255,0.08)" stroke-width="0.5"/>
+  <line x1="130" y1="111" x2="440" y2="111" stroke="rgba(0,229,255,0.08)" stroke-width="0.5"/>
+  <line x1="130" y1="65" x2="440" y2="65" stroke="rgba(0,229,255,0.08)" stroke-width="0.5"/>
+
+  <!-- Y-axis labels -->
+  <text x="120" y="256" text-anchor="end" font-family="monospace" font-size="8" fill="rgba(0,229,255,0.4)">0%</text>
+  <text x="120" y="209" text-anchor="end" font-family="monospace" font-size="8" fill="rgba(0,229,255,0.4)">25%</text>
+  <text x="120" y="162" text-anchor="end" font-family="monospace" font-size="8" fill="rgba(0,229,255,0.4)">50%</text>
+  <text x="120" y="115" text-anchor="end" font-family="monospace" font-size="8" fill="rgba(0,229,255,0.4)">75%</text>
+  <text x="120" y="68" text-anchor="end" font-family="monospace" font-size="8" fill="rgba(0,229,255,0.4)">100%</text>
+
+  <!-- BAR GROUP 1: Accuracy -->
+  <!-- Video bar (95%) -->
+  <rect x="155" y="77" width="38" height="175" rx="3" fill="url(#bar1)" opacity="0.85"/>
+  <rect x="155" y="77" width="38" height="4" rx="2" fill="#00ffff" opacity="0.5"/>
+  <text x="174" y="72" text-anchor="middle" font-family="monospace" font-size="8" fill="#00e5ff" filter="url(#glow)">95%</text>
+  <!-- Frame bar (93%) -->
+  <rect x="202" y="85" width="38" height="167" rx="3" fill="url(#bar2)" opacity="0.85"/>
+  <rect x="202" y="85" width="38" height="4" rx="2" fill="#dd88ff" opacity="0.5"/>
+  <text x="221" y="80" text-anchor="middle" font-family="monospace" font-size="8" fill="#cc88ff" filter="url(#glow)">93%</text>
+
+  <!-- BAR GROUP 2: AUC-ROC -->
+  <!-- Video bar (97%) -->
+  <rect x="265" y="66" width="38" height="186" rx="3" fill="url(#bar1)" opacity="0.85"/>
+  <rect x="265" y="66" width="38" height="4" rx="2" fill="#00ffff" opacity="0.5"/>
+  <text x="284" y="61" text-anchor="middle" font-family="monospace" font-size="8" fill="#00e5ff" filter="url(#glow)">0.97</text>
+  <!-- Frame bar (95%) -->
+  <rect x="312" y="77" width="38" height="175" rx="3" fill="url(#bar2)" opacity="0.85"/>
+  <rect x="312" y="77" width="38" height="4" rx="2" fill="#dd88ff" opacity="0.5"/>
+  <text x="331" y="72" text-anchor="middle" font-family="monospace" font-size="8" fill="#cc88ff" filter="url(#glow)">0.95</text>
+
+  <!-- BAR GROUP 3: F1 -->
+  <!-- Video bar (95%) -->
+  <rect x="375" y="77" width="38" height="175" rx="3" fill="url(#bar1)" opacity="0.85"/>
+  <rect x="375" y="77" width="38" height="4" rx="2" fill="#00ffff" opacity="0.5"/>
+  <text x="394" y="72" text-anchor="middle" font-family="monospace" font-size="8" fill="#00e5ff" filter="url(#glow)">0.95</text>
+  <!-- Frame bar (93%) -->
+  <!-- <rect x="422" y="85" width="38" height="167" rx="3" fill="url(#bar2)" opacity="0.85"/>
+  <text x="441" y="80" text-anchor="middle" font-family="monospace" font-size="8" fill="#cc88ff">0.93</text> -->
+
+  <!-- X-axis labels -->
+  <text x="200" y="268" text-anchor="middle" font-family="monospace" font-size="9" fill="rgba(0,229,255,0.6)">Accuracy</text>
+  <text x="310" y="268" text-anchor="middle" font-family="monospace" font-size="9" fill="rgba(0,229,255,0.6)">AUC-ROC</text>
+  <text x="394" y="268" text-anchor="middle" font-family="monospace" font-size="9" fill="rgba(0,229,255,0.6)">F1-Score</text>
+
+  <!-- Legend -->
+  <rect x="145" y="280" width="10" height="10" rx="2" fill="url(#bar1)"/>
+  <text x="160" y="289" font-family="monospace" font-size="8" fill="rgba(0,229,255,0.6)">Video-Level</text>
+  <rect x="230" y="280" width="10" height="10" rx="2" fill="url(#bar2)"/>
+  <text x="245" y="289" font-family="monospace" font-size="8" fill="rgba(170,68,255,0.6)">Frame-Level</text>
+
+  <!-- Vertical divider -->
+  <line x1="480" y1="55" x2="480" y2="295" stroke="rgba(0,229,255,0.1)" stroke-width="1" stroke-dasharray="4,4"/>
+
+  <!-- === RIGHT: METRIC CARDS === -->
+  <!-- Card 1 -->
+  <rect x="500" y="62" width="180" height="70" rx="8" fill="rgba(0,30,60,0.8)" stroke="rgba(0,229,255,0.4)" stroke-width="1"/>
+  <text x="590" y="88" text-anchor="middle" font-family="'Arial Black', sans-serif" font-size="24" font-weight="900" fill="#00e5ff" filter="url(#glow)">95%+</text>
+  <text x="590" y="108" text-anchor="middle" font-family="monospace" font-size="9" fill="rgba(0,229,255,0.55)" letter-spacing="2">VIDEO ACCURACY</text>
+  <circle cx="520" cy="75" r="4" fill="#00ff88"/>
+
+  <!-- Card 2 -->
+  <rect x="700" y="62" width="180" height="70" rx="8" fill="rgba(30,0,55,0.8)" stroke="rgba(170,68,255,0.4)" stroke-width="1"/>
+  <text x="790" y="88" text-anchor="middle" font-family="'Arial Black', sans-serif" font-size="24" font-weight="900" fill="#cc88ff" filter="url(#glow)">93%+</text>
+  <text x="790" y="108" text-anchor="middle" font-family="monospace" font-size="9" fill="rgba(170,68,255,0.55)" letter-spacing="2">FRAME ACCURACY</text>
+  <circle cx="720" cy="75" r="4" fill="#aa44ff"/>
+
+  <!-- Card 3 -->
+  <rect x="500" y="150" width="180" height="70" rx="8" fill="rgba(0,30,20,0.8)" stroke="rgba(0,255,136,0.4)" stroke-width="1"/>
+  <text x="590" y="176" text-anchor="middle" font-family="'Arial Black', sans-serif" font-size="24" font-weight="900" fill="#00ff88" filter="url(#glow)">0.97+</text>
+  <text x="590" y="196" text-anchor="middle" font-family="monospace" font-size="9" fill="rgba(0,255,136,0.55)" letter-spacing="2">VIDEO AUC-ROC</text>
+  <circle cx="520" cy="163" r="4" fill="#00ff88"/>
+
+  <!-- Card 4 -->
+  <rect x="700" y="150" width="180" height="70" rx="8" fill="rgba(40,20,0,0.8)" stroke="rgba(255,165,0,0.4)" stroke-width="1"/>
+  <text x="790" y="176" text-anchor="middle" font-family="'Arial Black', sans-serif" font-size="24" font-weight="900" fill="#ffa500" filter="url(#glow)">0.95+</text>
+  <text x="790" y="196" text-anchor="middle" font-family="monospace" font-size="9" fill="rgba(255,165,0,0.55)" letter-spacing="2">FRAME AUC-ROC</text>
+  <circle cx="720" cy="163" r="4" fill="#ffa500"/>
+
+  <!-- ROC curve mini visual -->
+  <rect x="500" y="238" width="380" height="60" rx="8" fill="rgba(0,20,40,0.7)" stroke="rgba(0,229,255,0.15)" stroke-width="1"/>
+  <text x="690" y="255" text-anchor="middle" font-family="monospace" font-size="8" fill="rgba(0,229,255,0.4)" letter-spacing="2">ROC CURVE (approximate)</text>
+  <!-- Mini ROC: axes -->
+  <line x1="520" y1="288" x2="520" y2="248" stroke="rgba(0,229,255,0.3)" stroke-width="0.8"/>
+  <line x1="520" y1="288" x2="620" y2="288" stroke="rgba(0,229,255,0.3)" stroke-width="0.8"/>
+  <!-- diagonal (random) -->
+  <line x1="520" y1="288" x2="620" y2="248" stroke="rgba(255,255,255,0.1)" stroke-width="0.8" stroke-dasharray="2,2"/>
+  <!-- Video ROC curve -->
+  <path d="M 520 288 Q 530 253 570 250 Q 600 249 620 248" fill="none" stroke="#00e5ff" stroke-width="1.5" opacity="0.8"/>
+  <!-- Frame ROC curve -->
+  <path d="M 520 288 Q 533 258 572 254 Q 605 252 620 248" fill="none" stroke="#aa44ff" stroke-width="1.5" opacity="0.8" stroke-dasharray="3,1"/>
+
+  <!-- axis labels -->
+  <text x="570" y="298" text-anchor="middle" font-family="monospace" font-size="7" fill="rgba(0,229,255,0.3)">FPR</text>
+  <text x="512" y="270" text-anchor="middle" font-family="monospace" font-size="7" fill="rgba(0,229,255,0.3)" transform="rotate(-90, 512, 270)">TPR</text>
+
+  <!-- Legend mini ROC -->
+  <line x1="645" y1="265" x2="665" y2="265" stroke="#00e5ff" stroke-width="1.5"/>
+  <text x="670" y="268" font-family="monospace" font-size="7" fill="rgba(0,229,255,0.6)">Video</text>
+  <line x1="645" y1="278" x2="665" y2="278" stroke="#aa44ff" stroke-width="1.5" stroke-dasharray="3,1"/>
+  <text x="670" y="281" font-family="monospace" font-size="7" fill="rgba(170,68,255,0.6)">Frame</text>
+</svg>

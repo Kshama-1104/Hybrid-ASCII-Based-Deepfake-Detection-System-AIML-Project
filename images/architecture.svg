@@ -1,0 +1,166 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 600" width="1000" height="600">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#060d18"/>
+      <stop offset="100%" style="stop-color:#0a0f1e"/>
+    </linearGradient>
+    <linearGradient id="pixelBox" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#003355"/>
+      <stop offset="100%" style="stop-color:#001a2e"/>
+    </linearGradient>
+    <linearGradient id="asciiBox" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#220033"/>
+      <stop offset="100%" style="stop-color:#110022"/>
+    </linearGradient>
+    <linearGradient id="fusionBox" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#001a33"/>
+      <stop offset="100%" style="stop-color:#000e1a"/>
+    </linearGradient>
+    <linearGradient id="lstmBox" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a0022"/>
+      <stop offset="100%" style="stop-color:#0a0011"/>
+    </linearGradient>
+    <pattern id="dots" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
+      <circle cx="10" cy="10" r="0.8" fill="rgba(0,229,255,0.07)"/>
+    </pattern>
+    <marker id="arrowCyan" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#00e5ff" opacity="0.8"/>
+    </marker>
+    <marker id="arrowRed" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#ff2244" opacity="0.8"/>
+    </marker>
+    <marker id="arrowGreen" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#00ff88" opacity="0.8"/>
+    </marker>
+    <marker id="arrowOrange" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#ffa500" opacity="0.8"/>
+    </marker>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="2.5" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1000" height="600" rx="12" fill="url(#bg)"/>
+  <rect width="1000" height="600" rx="12" fill="url(#dots)"/>
+
+  <!-- Border -->
+  <rect x="1" y="1" width="998" height="598" rx="12" fill="none" stroke="rgba(0,229,255,0.2)" stroke-width="1"/>
+
+  <!-- Title -->
+  <text x="500" y="38" text-anchor="middle" font-family="'Arial Black', sans-serif" font-size="16" font-weight="900" fill="#00e5ff" filter="url(#glow)" letter-spacing="4">DUAL-PATH ARCHITECTURE</text>
+  <line x1="200" y1="48" x2="800" y2="48" stroke="rgba(0,229,255,0.2)" stroke-width="0.5"/>
+
+  <!-- ====== INPUT BOX ====== -->
+  <rect x="380" y="60" width="240" height="56" rx="8" fill="rgba(0,20,40,0.9)" stroke="#00e5ff" stroke-width="1.5"/>
+  <text x="500" y="82" text-anchor="middle" font-family="monospace" font-size="11" fill="#00e5ff" letter-spacing="2">INPUT</text>
+  <text x="500" y="100" text-anchor="middle" font-family="monospace" font-size="10" fill="rgba(0,229,255,0.6)">Video (.mp4) → 6 Frames</text>
+
+  <!-- Split arrows from input -->
+  <!-- Left arrow -->
+  <line x1="420" y1="116" x2="250" y2="165" stroke="#00e5ff" stroke-width="1.5" stroke-dasharray="4,2" marker-end="url(#arrowCyan)" opacity="0.8"/>
+  <!-- Right arrow -->
+  <line x1="580" y1="116" x2="750" y2="165" stroke="#aa44ff" stroke-width="1.5" stroke-dasharray="4,2" opacity="0.8"/>
+  <polygon points="742,160 750,165 742,170" fill="#aa44ff" opacity="0.8"/>
+
+  <!-- ====== PIXEL PATH ====== -->
+  <!-- Header label -->
+  <text x="200" y="158" text-anchor="middle" font-family="monospace" font-size="10" fill="#00e5ff" letter-spacing="3">PIXEL PATH</text>
+
+  <!-- Frame Extraction box -->
+  <rect x="90" y="168" width="220" height="50" rx="6" fill="url(#pixelBox)" stroke="rgba(0,229,255,0.5)" stroke-width="1"/>
+  <text x="200" y="189" text-anchor="middle" font-family="monospace" font-size="10" fill="#00e5ff">Frame Extraction</text>
+  <text x="200" y="207" text-anchor="middle" font-family="monospace" font-size="9" fill="rgba(0,229,255,0.5)">Uniform 6-frame sampling</text>
+
+  <!-- Arrow down -->
+  <line x1="200" y1="218" x2="200" y2="250" stroke="#00e5ff" stroke-width="1.5" marker-end="url(#arrowCyan)" opacity="0.7"/>
+
+  <!-- Resize box -->
+  <rect x="90" y="254" width="220" height="50" rx="6" fill="url(#pixelBox)" stroke="rgba(0,229,255,0.4)" stroke-width="1"/>
+  <text x="200" y="275" text-anchor="middle" font-family="monospace" font-size="10" fill="#00e5ff">Resize + Preprocess</text>
+  <text x="200" y="293" text-anchor="middle" font-family="monospace" font-size="9" fill="rgba(0,229,255,0.5)">224×224 · RGB</text>
+
+  <!-- Arrow down -->
+  <line x1="200" y1="304" x2="200" y2="336" stroke="#00e5ff" stroke-width="1.5" marker-end="url(#arrowCyan)" opacity="0.7"/>
+
+  <!-- InceptionResNetV2 box -->
+  <rect x="70" y="340" width="260" height="64" rx="6" fill="rgba(0,51,102,0.7)" stroke="#00e5ff" stroke-width="2"/>
+  <text x="200" y="364" text-anchor="middle" font-family="monospace" font-size="11" fill="#00e5ff" filter="url(#glow)">InceptionResNetV2</text>
+  <text x="200" y="382" text-anchor="middle" font-family="monospace" font-size="9" fill="rgba(0,229,255,0.55)">ImageNet Pretrained · 1536-dim</text>
+  <!-- Small icon dots -->
+  <circle cx="155" cy="372" r="3" fill="rgba(0,229,255,0.3)"/>
+  <circle cx="245" cy="372" r="3" fill="rgba(0,229,255,0.3)"/>
+
+  <!-- Arrow down to fusion -->
+  <line x1="200" y1="404" x2="200" y2="455" stroke="#00e5ff" stroke-width="1.5" marker-end="url(#arrowCyan)" opacity="0.7"/>
+  <text x="210" y="434" font-family="monospace" font-size="8" fill="rgba(0,229,255,0.4)">pixel features</text>
+
+  <!-- ====== ASCII PATH ====== -->
+  <text x="800" y="158" text-anchor="middle" font-family="monospace" font-size="10" fill="#aa44ff" letter-spacing="3">ASCII PATH</text>
+
+  <!-- ASCII Conversion box -->
+  <rect x="690" y="168" width="220" height="50" rx="6" fill="url(#asciiBox)" stroke="rgba(170,68,255,0.5)" stroke-width="1"/>
+  <text x="800" y="189" text-anchor="middle" font-family="monospace" font-size="10" fill="#cc88ff">ASCII Art Conversion</text>
+  <text x="800" y="207" text-anchor="middle" font-family="monospace" font-size="9" fill="rgba(170,68,255,0.5)">Grayscale → Char Map</text>
+
+  <!-- Arrow down -->
+  <line x1="800" y1="218" x2="800" y2="250" stroke="#aa44ff" stroke-width="1.5" opacity="0.7"/>
+  <polygon points="795,247 800,255 805,247" fill="#aa44ff" opacity="0.7"/>
+
+  <!-- Stat Features box -->
+  <rect x="690" y="254" width="220" height="50" rx="6" fill="url(#asciiBox)" stroke="rgba(170,68,255,0.4)" stroke-width="1"/>
+  <text x="800" y="275" text-anchor="middle" font-family="monospace" font-size="10" fill="#cc88ff">Statistical Features</text>
+  <text x="800" y="293" text-anchor="middle" font-family="monospace" font-size="9" fill="rgba(170,68,255,0.5)">32-dim ASCII stats vector</text>
+
+  <!-- Arrow down -->
+  <line x1="800" y1="304" x2="800" y2="336" stroke="#aa44ff" stroke-width="1.5" opacity="0.7"/>
+  <polygon points="795,333 800,341 805,333" fill="#aa44ff" opacity="0.7"/>
+
+  <!-- EfficientNetB4 box -->
+  <rect x="670" y="340" width="260" height="64" rx="6" fill="rgba(51,0,77,0.7)" stroke="#aa44ff" stroke-width="2"/>
+  <text x="800" y="364" text-anchor="middle" font-family="monospace" font-size="11" fill="#cc88ff" filter="url(#glow)">EfficientNetB4</text>
+  <text x="800" y="382" text-anchor="middle" font-family="monospace" font-size="9" fill="rgba(170,68,255,0.55)">ImageNet Pretrained · 1792-dim</text>
+  <circle cx="755" cy="372" r="3" fill="rgba(170,68,255,0.3)"/>
+  <circle cx="845" cy="372" r="3" fill="rgba(170,68,255,0.3)"/>
+
+  <!-- Arrow down to fusion -->
+  <line x1="800" y1="404" x2="800" y2="455" stroke="#aa44ff" stroke-width="1.5" opacity="0.7"/>
+  <polygon points="795,452 800,460 805,452" fill="#aa44ff" opacity="0.7"/>
+  <text x="810" y="434" font-family="monospace" font-size="8" fill="rgba(170,68,255,0.4)">ascii features</text>
+
+  <!-- ====== FEATURE FUSION ====== -->
+  <rect x="290" y="460" width="420" height="60" rx="8" fill="url(#fusionBox)" stroke="rgba(0,229,255,0.6)" stroke-width="2"/>
+  <text x="500" y="483" text-anchor="middle" font-family="monospace" font-size="12" fill="#00e5ff" letter-spacing="2">FEATURE FUSION</text>
+  <text x="500" y="502" text-anchor="middle" font-family="monospace" font-size="9" fill="rgba(0,229,255,0.5)">Concatenate: pixel + ascii + stats → dense representation</text>
+
+  <!-- Arrow lines going INTO fusion box (horizontal) -->
+  <line x1="200" y1="460" x2="290" y2="490" stroke="#00e5ff" stroke-width="1" stroke-dasharray="3,2" opacity="0.5"/>
+  <line x1="800" y1="460" x2="710" y2="490" stroke="#aa44ff" stroke-width="1" stroke-dasharray="3,2" opacity="0.5"/>
+
+  <!-- Arrow from fusion to LSTM -->
+  <line x1="500" y1="520" x2="500" y2="548" stroke="rgba(0,255,136,0.8)" stroke-width="2" marker-end="url(#arrowGreen)"/>
+
+  <!-- ====== BiLSTM ====== -->
+  <rect x="340" y="553" width="320" height="28" rx="6" fill="url(#lstmBox)" stroke="rgba(255,165,0,0.7)" stroke-width="1.5"/>
+  <!-- BiLSTM arrows left and right to show bidirectional -->
+  <line x1="360" y1="567" x2="420" y2="567" stroke="#ffa500" stroke-width="1" marker-end="url(#arrowOrange)"/>
+  <line x1="640" y1="567" x2="580" y2="567" stroke="#ffa500" stroke-width="1" marker-end="url(#arrowOrange)"/>
+  <text x="500" y="572" text-anchor="middle" font-family="monospace" font-size="10" fill="#ffa500">Bidirectional LSTM · 128 units</text>
+
+  <!-- Outputs from LSTM -->
+  <line x1="420" y1="581" x2="340" y2="595" stroke="rgba(255,34,68,0.7)" stroke-width="1.5" marker-end="url(#arrowRed)"/>
+  <line x1="580" y1="581" x2="660" y2="595" stroke="rgba(0,255,136,0.7)" stroke-width="1.5" marker-end="url(#arrowGreen)"/>
+
+  <!-- Output boxes -->
+  <rect x="220" y="596" width="200" height="30" rx="5" fill="rgba(80,0,20,0.8)" stroke="rgba(255,34,68,0.6)" stroke-width="1"/>
+  <text x="320" y="615" text-anchor="middle" font-family="monospace" font-size="9" fill="#ff6688">Frame Logits (per-frame)</text>
+
+  <rect x="580" y="596" width="200" height="30" rx="5" fill="rgba(0,40,20,0.8)" stroke="rgba(0,255,136,0.6)" stroke-width="1"/>
+  <text x="680" y="615" text-anchor="middle" font-family="monospace" font-size="9" fill="#00ff88">Video Score (aggregated)</text>
+
+  <!-- ===== ASCII CHARS visual (small decoration) ===== -->
+  <text x="730" y="220" font-family="monospace" font-size="7" fill="rgba(170,68,255,0.35)">@%#*+=-:.</text>
+  <text x="730" y="229" font-family="monospace" font-size="7" fill="rgba(170,68,255,0.25)">%#*+=-:. </text>
+  <text x="730" y="238" font-family="monospace" font-size="7" fill="rgba(170,68,255,0.2)">*+=-:. @%</text>
+</svg>

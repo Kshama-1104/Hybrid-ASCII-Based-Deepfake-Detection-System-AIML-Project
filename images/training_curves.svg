@@ -1,0 +1,240 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 340" width="900" height="340">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#050c18"/>
+      <stop offset="100%" style="stop-color:#090f1e"/>
+    </linearGradient>
+    <pattern id="dots" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
+      <circle cx="10" cy="10" r="0.6" fill="rgba(0,229,255,0.05)"/>
+    </pattern>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="2" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <!-- Area fill gradients -->
+    <linearGradient id="trainLossArea" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#ff2244;stop-opacity:0.2"/>
+      <stop offset="100%" style="stop-color:#ff2244;stop-opacity:0"/>
+    </linearGradient>
+    <linearGradient id="valLossArea" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#ffa500;stop-opacity:0.15"/>
+      <stop offset="100%" style="stop-color:#ffa500;stop-opacity:0"/>
+    </linearGradient>
+    <linearGradient id="trainAccArea" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#00e5ff;stop-opacity:0.2"/>
+      <stop offset="100%" style="stop-color:#00e5ff;stop-opacity:0"/>
+    </linearGradient>
+    <linearGradient id="valAccArea" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#00ff88;stop-opacity:0.15"/>
+      <stop offset="100%" style="stop-color:#00ff88;stop-opacity:0"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="900" height="340" rx="12" fill="url(#bg)"/>
+  <rect width="900" height="340" rx="12" fill="url(#dots)"/>
+  <rect x="1" y="1" width="898" height="338" rx="12" fill="none" stroke="rgba(0,229,255,0.18)" stroke-width="1"/>
+
+  <!-- Title -->
+  <text x="450" y="28" text-anchor="middle" font-family="'Arial Black', sans-serif" font-size="13" font-weight="900" fill="#00e5ff" filter="url(#glow)" letter-spacing="4">TRAINING CURVES</text>
+  <text x="450" y="43" text-anchor="middle" font-family="monospace" font-size="9" fill="rgba(0,229,255,0.4)" letter-spacing="2">LOSS &amp; ACCURACY OVER 11 EPOCHS</text>
+  <line x1="60" y1="51" x2="840" y2="51" stroke="rgba(0,229,255,0.1)" stroke-width="0.5"/>
+
+  <!-- ============ LEFT CHART: LOSS ============ -->
+  <!-- Panel bg -->
+  <rect x="40" y="62" width="390" height="220" rx="6" fill="rgba(0,10,25,0.5)" stroke="rgba(0,229,255,0.1)" stroke-width="1"/>
+  <text x="235" y="80" text-anchor="middle" font-family="monospace" font-size="10" fill="rgba(255,34,68,0.7)" letter-spacing="2">LOSS</text>
+
+  <!-- Axes -->
+  <line x1="80" y1="90" x2="80" y2="255" stroke="rgba(0,229,255,0.3)" stroke-width="1"/>
+  <line x1="80" y1="255" x2="405" y2="255" stroke="rgba(0,229,255,0.3)" stroke-width="1"/>
+
+  <!-- Grid lines - horizontal -->
+  <line x1="80" y1="90"  x2="405" y2="90"  stroke="rgba(0,229,255,0.06)" stroke-width="0.5"/>
+  <line x1="80" y1="131" x2="405" y2="131" stroke="rgba(0,229,255,0.06)" stroke-width="0.5"/>
+  <line x1="80" y1="172" x2="405" y2="172" stroke="rgba(0,229,255,0.06)" stroke-width="0.5"/>
+  <line x1="80" y1="213" x2="405" y2="213" stroke="rgba(0,229,255,0.06)" stroke-width="0.5"/>
+
+  <!-- Y-axis labels (loss: 0 to 1.0) -->
+  <text x="72" y="258" text-anchor="end" font-family="monospace" font-size="7" fill="rgba(0,229,255,0.35)">0.0</text>
+  <text x="72" y="217" text-anchor="end" font-family="monospace" font-size="7" fill="rgba(0,229,255,0.35)">0.25</text>
+  <text x="72" y="176" text-anchor="end" font-family="monospace" font-size="7" fill="rgba(0,229,255,0.35)">0.5</text>
+  <text x="72" y="135" text-anchor="end" font-family="monospace" font-size="7" fill="rgba(0,229,255,0.35)">0.75</text>
+  <text x="72" y="94"  text-anchor="end" font-family="monospace" font-size="7" fill="rgba(0,229,255,0.35)">1.0</text>
+
+  <!-- X-axis labels (epochs 1–11) -->
+  <!-- x positions: epoch 1=108, 2=138, 3=168... step=30, 11=380 -->
+  <text x="108" y="267" text-anchor="middle" font-family="monospace" font-size="7" fill="rgba(0,229,255,0.35)">1</text>
+  <text x="138" y="267" text-anchor="middle" font-family="monospace" font-size="7" fill="rgba(0,229,255,0.35)">2</text>
+  <text x="168" y="267" text-anchor="middle" font-family="monospace" font-size="7" fill="rgba(0,229,255,0.35)">3</text>
+  <text x="198" y="267" text-anchor="middle" font-family="monospace" font-size="7" fill="rgba(0,229,255,0.35)">4</text>
+  <text x="228" y="267" text-anchor="middle" font-family="monospace" font-size="7" fill="rgba(0,229,255,0.35)">5</text>
+  <text x="258" y="267" text-anchor="middle" font-family="monospace" font-size="7" fill="rgba(0,229,255,0.35)">6</text>
+  <text x="288" y="267" text-anchor="middle" font-family="monospace" font-size="7" fill="rgba(0,229,255,0.35)">7</text>
+  <text x="318" y="267" text-anchor="middle" font-family="monospace" font-size="7" fill="rgba(0,229,255,0.35)">8</text>
+  <text x="348" y="267" text-anchor="middle" font-family="monospace" font-size="7" fill="rgba(0,229,255,0.35)">9</text>
+  <text x="378" y="267" text-anchor="middle" font-family="monospace" font-size="7" fill="rgba(0,229,255,0.35)">10</text>
+  <text x="408" y="267" text-anchor="middle" font-family="monospace" font-size="7" fill="rgba(0,229,255,0.35)">11</text>
+  <text x="243" y="280" text-anchor="middle" font-family="monospace" font-size="8" fill="rgba(0,229,255,0.25)">EPOCH</text>
+
+  <!-- 
+    Loss coords: y=255 is 0.0, y=90 is 1.0. range=165px
+    epoch x: 80 + epoch*30 - 30+28 = 78+30n; ep1=108, ep2=138...
+    Train loss: 0.95, 0.78, 0.62, 0.50, 0.42, 0.35, 0.30, 0.26, 0.23, 0.21, 0.19
+    y = 255 - val*165
+    0.95→99, 0.78→127, 0.62→153, 0.50→172, 0.42→185, 0.35→198, 0.30→206, 0.26→212, 0.23→217, 0.21→221, 0.19→224
+    Val loss: 1.05→(cap 90), 0.88→110, 0.70→139, 0.58→159, 0.48→176, 0.40→189, 0.34→199, 0.31→204, 0.28→208, 0.27→210, 0.26→212
+  -->
+
+  <!-- Train loss area fill -->
+  <polygon points="108,99 138,127 168,153 198,172 228,185 258,198 288,206 318,212 348,217 378,221 408,224 408,255 108,255"
+           fill="url(#trainLossArea)"/>
+  <!-- Val loss area fill -->
+  <polygon points="108,90 138,110 168,139 198,159 228,176 258,189 288,199 318,204 348,208 378,210 408,212 408,255 108,255"
+           fill="url(#valLossArea)"/>
+
+  <!-- Train loss line -->
+  <polyline points="108,99 138,127 168,153 198,172 228,185 258,198 288,206 318,212 348,217 378,221 408,224"
+            fill="none" stroke="#ff2244" stroke-width="2" stroke-linejoin="round"/>
+  <!-- Train loss dots -->
+  <circle cx="108" cy="99"  r="3" fill="#ff2244"/>
+  <circle cx="138" cy="127" r="3" fill="#ff2244"/>
+  <circle cx="168" cy="153" r="3" fill="#ff2244"/>
+  <circle cx="198" cy="172" r="3" fill="#ff2244"/>
+  <circle cx="228" cy="185" r="3" fill="#ff2244"/>
+  <circle cx="258" cy="198" r="3" fill="#ff2244"/>
+  <circle cx="288" cy="206" r="3" fill="#ff2244"/>
+  <circle cx="318" cy="212" r="3" fill="#ff2244"/>
+  <circle cx="348" cy="217" r="3" fill="#ff2244"/>
+  <circle cx="378" cy="221" r="3" fill="#ff2244"/>
+  <circle cx="408" cy="224" r="3" fill="#ff2244"/>
+
+  <!-- Val loss line -->
+  <polyline points="108,90 138,110 168,139 198,159 228,176 258,189 288,199 318,204 348,208 378,210 408,212"
+            fill="none" stroke="#ffa500" stroke-width="2" stroke-dasharray="5,3" stroke-linejoin="round"/>
+  <!-- Val loss dots -->
+  <circle cx="108" cy="90"  r="3" fill="#ffa500"/>
+  <circle cx="138" cy="110" r="3" fill="#ffa500"/>
+  <circle cx="168" cy="139" r="3" fill="#ffa500"/>
+  <circle cx="198" cy="159" r="3" fill="#ffa500"/>
+  <circle cx="228" cy="176" r="3" fill="#ffa500"/>
+  <circle cx="258" cy="189" r="3" fill="#ffa500"/>
+  <circle cx="288" cy="199" r="3" fill="#ffa500"/>
+  <circle cx="318" cy="204" r="3" fill="#ffa500"/>
+  <circle cx="348" cy="208" r="3" fill="#ffa500"/>
+  <circle cx="378" cy="210" r="3" fill="#ffa500"/>
+  <circle cx="408" cy="212" r="3" fill="#ffa500"/>
+
+  <!-- Loss chart legend -->
+  <line x1="88" y1="299" x2="108" y2="299" stroke="#ff2244" stroke-width="2"/>
+  <circle cx="98" cy="299" r="3" fill="#ff2244"/>
+  <text x="113" y="303" font-family="monospace" font-size="8" fill="rgba(255,34,68,0.7)">Train Loss</text>
+  <line x1="185" y1="299" x2="205" y2="299" stroke="#ffa500" stroke-width="2" stroke-dasharray="4,2"/>
+  <circle cx="195" cy="299" r="3" fill="#ffa500"/>
+  <text x="210" y="303" font-family="monospace" font-size="8" fill="rgba(255,165,0,0.7)">Val Loss</text>
+
+  <!-- Best epoch marker -->
+  <line x1="408" y1="90" x2="408" y2="255" stroke="rgba(0,255,136,0.3)" stroke-width="1" stroke-dasharray="3,3"/>
+  <text x="414" y="100" font-family="monospace" font-size="7" fill="rgba(0,255,136,0.5)">best</text>
+
+  <!-- ============ RIGHT CHART: ACCURACY ============ -->
+  <rect x="468" y="62" width="390" height="220" rx="6" fill="rgba(0,10,25,0.5)" stroke="rgba(0,229,255,0.1)" stroke-width="1"/>
+  <text x="663" y="80" text-anchor="middle" font-family="monospace" font-size="10" fill="rgba(0,229,255,0.7)" letter-spacing="2">ACCURACY</text>
+
+  <!-- Axes -->
+  <line x1="508" y1="90" x2="508" y2="255" stroke="rgba(0,229,255,0.3)" stroke-width="1"/>
+  <line x1="508" y1="255" x2="833" y2="255" stroke="rgba(0,229,255,0.3)" stroke-width="1"/>
+
+  <!-- Grid lines -->
+  <line x1="508" y1="90"  x2="833" y2="90"  stroke="rgba(0,229,255,0.06)" stroke-width="0.5"/>
+  <line x1="508" y1="131" x2="833" y2="131" stroke="rgba(0,229,255,0.06)" stroke-width="0.5"/>
+  <line x1="508" y1="172" x2="833" y2="172" stroke="rgba(0,229,255,0.06)" stroke-width="0.5"/>
+  <line x1="508" y1="213" x2="833" y2="213" stroke="rgba(0,229,255,0.06)" stroke-width="0.5"/>
+
+  <!-- Y-axis labels (accuracy: 50% to 100%) -->
+  <text x="500" y="258" text-anchor="end" font-family="monospace" font-size="7" fill="rgba(0,229,255,0.35)">50%</text>
+  <text x="500" y="217" text-anchor="end" font-family="monospace" font-size="7" fill="rgba(0,229,255,0.35)">63%</text>
+  <text x="500" y="176" text-anchor="end" font-family="monospace" font-size="7" fill="rgba(0,229,255,0.35)">75%</text>
+  <text x="500" y="135" text-anchor="end" font-family="monospace" font-size="7" fill="rgba(0,229,255,0.35)">88%</text>
+  <text x="500" y="94"  text-anchor="end" font-family="monospace" font-size="7" fill="rgba(0,229,255,0.35)">100%</text>
+
+  <!-- X-axis labels -->
+  <text x="536" y="267" text-anchor="middle" font-family="monospace" font-size="7" fill="rgba(0,229,255,0.35)">1</text>
+  <text x="566" y="267" text-anchor="middle" font-family="monospace" font-size="7" fill="rgba(0,229,255,0.35)">2</text>
+  <text x="596" y="267" text-anchor="middle" font-family="monospace" font-size="7" fill="rgba(0,229,255,0.35)">3</text>
+  <text x="626" y="267" text-anchor="middle" font-family="monospace" font-size="7" fill="rgba(0,229,255,0.35)">4</text>
+  <text x="656" y="267" text-anchor="middle" font-family="monospace" font-size="7" fill="rgba(0,229,255,0.35)">5</text>
+  <text x="686" y="267" text-anchor="middle" font-family="monospace" font-size="7" fill="rgba(0,229,255,0.35)">6</text>
+  <text x="716" y="267" text-anchor="middle" font-family="monospace" font-size="7" fill="rgba(0,229,255,0.35)">7</text>
+  <text x="746" y="267" text-anchor="middle" font-family="monospace" font-size="7" fill="rgba(0,229,255,0.35)">8</text>
+  <text x="776" y="267" text-anchor="middle" font-family="monospace" font-size="7" fill="rgba(0,229,255,0.35)">9</text>
+  <text x="806" y="267" text-anchor="middle" font-family="monospace" font-size="7" fill="rgba(0,229,255,0.35)">10</text>
+  <text x="836" y="267" text-anchor="middle" font-family="monospace" font-size="7" fill="rgba(0,229,255,0.35)">11</text>
+  <text x="671" y="280" text-anchor="middle" font-family="monospace" font-size="8" fill="rgba(0,229,255,0.25)">EPOCH</text>
+
+  <!--
+    Accuracy: y=255 is 50%, y=90 is 100%. range=165px for 50pp
+    1pp = 3.3px
+    Train acc: 0.62, 0.71, 0.79, 0.85, 0.89, 0.92, 0.93, 0.94, 0.95, 0.95, 0.96
+    y = 255 - (acc-0.5)*330
+    0.62→215, 0.71→188, 0.79→162, 0.85→145, 0.89→132, 0.92→122, 0.93→119, 0.94→116, 0.95→113, 0.95→113, 0.96→110
+    Val acc: 0.58, 0.66, 0.74, 0.80, 0.85, 0.88, 0.90, 0.92, 0.93, 0.94, 0.95
+    0.58→226, 0.66→200, 0.74→174, 0.80→156, 0.85→140, 0.88→130, 0.90→123, 0.92→116, 0.93→113, 0.94→109, 0.95→107
+  -->
+
+  <!-- Train acc area -->
+  <polygon points="536,215 566,188 596,162 626,145 656,132 686,122 716,119 746,116 776,113 806,113 836,110 836,255 536,255"
+           fill="url(#trainAccArea)"/>
+  <!-- Val acc area -->
+  <polygon points="536,226 566,200 596,174 626,156 656,140 686,130 716,123 746,116 776,113 806,109 836,107 836,255 536,255"
+           fill="url(#valAccArea)"/>
+
+  <!-- Train acc line -->
+  <polyline points="536,215 566,188 596,162 626,145 656,132 686,122 716,119 746,116 776,113 806,113 836,110"
+            fill="none" stroke="#00e5ff" stroke-width="2" stroke-linejoin="round"/>
+  <circle cx="536" cy="215" r="3" fill="#00e5ff"/>
+  <circle cx="566" cy="188" r="3" fill="#00e5ff"/>
+  <circle cx="596" cy="162" r="3" fill="#00e5ff"/>
+  <circle cx="626" cy="145" r="3" fill="#00e5ff"/>
+  <circle cx="656" cy="132" r="3" fill="#00e5ff"/>
+  <circle cx="686" cy="122" r="3" fill="#00e5ff"/>
+  <circle cx="716" cy="119" r="3" fill="#00e5ff"/>
+  <circle cx="746" cy="116" r="3" fill="#00e5ff"/>
+  <circle cx="776" cy="113" r="3" fill="#00e5ff"/>
+  <circle cx="806" cy="113" r="3" fill="#00e5ff"/>
+  <circle cx="836" cy="110" r="3" fill="#00e5ff"/>
+
+  <!-- Val acc line -->
+  <polyline points="536,226 566,200 596,174 626,156 656,140 686,130 716,123 746,116 776,113 806,109 836,107"
+            fill="none" stroke="#00ff88" stroke-width="2" stroke-dasharray="5,3" stroke-linejoin="round"/>
+  <circle cx="536" cy="226" r="3" fill="#00ff88"/>
+  <circle cx="566" cy="200" r="3" fill="#00ff88"/>
+  <circle cx="596" cy="174" r="3" fill="#00ff88"/>
+  <circle cx="626" cy="156" r="3" fill="#00ff88"/>
+  <circle cx="656" cy="140" r="3" fill="#00ff88"/>
+  <circle cx="686" cy="130" r="3" fill="#00ff88"/>
+  <circle cx="716" cy="123" r="3" fill="#00ff88"/>
+  <circle cx="746" cy="116" r="3" fill="#00ff88"/>
+  <circle cx="776" cy="113" r="3" fill="#00ff88"/>
+  <circle cx="806" cy="109" r="3" fill="#00ff88"/>
+  <circle cx="836" cy="107" r="3" fill="#00ff88"/>
+
+  <!-- Best epoch marker -->
+  <line x1="836" y1="90" x2="836" y2="255" stroke="rgba(0,255,136,0.3)" stroke-width="1" stroke-dasharray="3,3"/>
+  <text x="823" y="100" font-family="monospace" font-size="7" fill="rgba(0,255,136,0.5)">best</text>
+
+  <!-- 95% reference line -->
+  <line x1="508" y1="113" x2="833" y2="113" stroke="rgba(0,229,255,0.15)" stroke-width="1" stroke-dasharray="2,4"/>
+  <text x="840" y="116" font-family="monospace" font-size="7" fill="rgba(0,229,255,0.35)">95%</text>
+
+  <!-- Acc chart legend -->
+  <line x1="516" y1="299" x2="536" y2="299" stroke="#00e5ff" stroke-width="2"/>
+  <circle cx="526" cy="299" r="3" fill="#00e5ff"/>
+  <text x="541" y="303" font-family="monospace" font-size="8" fill="rgba(0,229,255,0.7)">Train Acc</text>
+  <line x1="620" y1="299" x2="640" y2="299" stroke="#00ff88" stroke-width="2" stroke-dasharray="4,2"/>
+  <circle cx="630" cy="299" r="3" fill="#00ff88"/>
+  <text x="645" y="303" font-family="monospace" font-size="8" fill="rgba(0,255,136,0.7)">Val Acc</text>
+
+  <!-- Bottom summary bar -->
+  <rect x="40" y="316" width="820" height="18" rx="5" fill="rgba(0,229,255,0.04)" stroke="rgba(0,229,255,0.1)" stroke-width="0.5"/>
+  <text x="450" y="328" text-anchor="middle" font-family="monospace" font-size="8" fill="rgba(0,229,255,0.35)" letter-spacing="1">OPTIMIZER: Adam (lr=1e-4) · CALLBACKS: EarlyStopping (p=3) · ReduceLROnPlateau (f=0.5, p=2) · ModelCheckpoint</text>
+</svg>

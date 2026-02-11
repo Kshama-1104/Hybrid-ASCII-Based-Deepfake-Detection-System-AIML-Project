@@ -1,0 +1,184 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 280" width="1100" height="280">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#050d18"/>
+      <stop offset="100%" style="stop-color:#090f1e"/>
+    </linearGradient>
+    <linearGradient id="videoGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0a2a44"/>
+      <stop offset="100%" style="stop-color:#051525"/>
+    </linearGradient>
+    <linearGradient id="frameGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#003355"/>
+      <stop offset="100%" style="stop-color:#001a33"/>
+    </linearGradient>
+    <linearGradient id="pixelPathGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#004466"/>
+      <stop offset="100%" style="stop-color:#001a33"/>
+    </linearGradient>
+    <linearGradient id="asciiPathGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#330044"/>
+      <stop offset="100%" style="stop-color:#1a0022"/>
+    </linearGradient>
+    <linearGradient id="outGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#002211"/>
+      <stop offset="100%" style="stop-color:#001108"/>
+    </linearGradient>
+    <pattern id="dots" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
+      <circle cx="10" cy="10" r="0.6" fill="rgba(0,229,255,0.05)"/>
+    </pattern>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="2" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <marker id="arrC" markerWidth="7" markerHeight="5" refX="6" refY="2.5" orient="auto">
+      <polygon points="0 0, 7 2.5, 0 5" fill="#00e5ff" opacity="0.8"/>
+    </marker>
+    <marker id="arrP" markerWidth="7" markerHeight="5" refX="6" refY="2.5" orient="auto">
+      <polygon points="0 0, 7 2.5, 0 5" fill="#00e5ff" opacity="0.7"/>
+    </marker>
+    <marker id="arrA" markerWidth="7" markerHeight="5" refX="6" refY="2.5" orient="auto">
+      <polygon points="0 0, 7 2.5, 0 5" fill="#aa44ff" opacity="0.7"/>
+    </marker>
+    <marker id="arrG" markerWidth="7" markerHeight="5" refX="6" refY="2.5" orient="auto">
+      <polygon points="0 0, 7 2.5, 0 5" fill="#00ff88" opacity="0.8"/>
+    </marker>
+  </defs>
+
+  <!-- BG -->
+  <rect width="1100" height="280" rx="12" fill="url(#bg)"/>
+  <rect width="1100" height="280" rx="12" fill="url(#dots)"/>
+  <rect x="1" y="1" width="1098" height="278" rx="12" fill="none" stroke="rgba(0,229,255,0.18)" stroke-width="1"/>
+
+  <!-- Title -->
+  <text x="550" y="28" text-anchor="middle" font-family="'Arial Black', sans-serif" font-size="13" font-weight="900" fill="#00e5ff" filter="url(#glow)" letter-spacing="4">FRAME PROCESSING PIPELINE</text>
+  <line x1="100" y1="36" x2="1000" y2="36" stroke="rgba(0,229,255,0.12)" stroke-width="0.5"/>
+
+  <!-- ===== STEP 1: VIDEO INPUT ===== -->
+  <rect x="28" y="100" width="120" height="80" rx="8" fill="url(#videoGrad)" stroke="rgba(0,229,255,0.5)" stroke-width="1.5"/>
+  <!-- Film strip marks -->
+  <rect x="28" y="100" width="14" height="80" rx="4" fill="rgba(0,0,0,0.4)"/>
+  <rect x="134" y="100" width="14" height="80" rx="4" fill="rgba(0,0,0,0.4)"/>
+  <rect x="30" y="108" width="10" height="10" rx="1" fill="rgba(0,229,255,0.25)"/>
+  <rect x="30" y="124" width="10" height="10" rx="1" fill="rgba(0,229,255,0.25)"/>
+  <rect x="30" y="140" width="10" height="10" rx="1" fill="rgba(0,229,255,0.25)"/>
+  <rect x="30" y="156" width="10" height="10" rx="1" fill="rgba(0,229,255,0.25)"/>
+  <rect x="136" y="108" width="10" height="10" rx="1" fill="rgba(0,229,255,0.25)"/>
+  <rect x="136" y="124" width="10" height="10" rx="1" fill="rgba(0,229,255,0.25)"/>
+  <rect x="136" y="140" width="10" height="10" rx="1" fill="rgba(0,229,255,0.25)"/>
+  <rect x="136" y="156" width="10" height="10" rx="1" fill="rgba(0,229,255,0.25)"/>
+  <!-- Play button -->
+  <polygon points="75,128 75,152 96,140" fill="rgba(0,229,255,0.4)"/>
+  <text x="88" y="196" text-anchor="middle" font-family="monospace" font-size="9" fill="rgba(0,229,255,0.5)" letter-spacing="1">INPUT VIDEO</text>
+  <text x="88" y="208" text-anchor="middle" font-family="monospace" font-size="8" fill="rgba(0,229,255,0.35)">.mp4 file</text>
+
+  <!-- Arrow 1 -->
+  <line x1="150" y1="140" x2="188" y2="140" stroke="#00e5ff" stroke-width="1.5" marker-end="url(#arrC)" opacity="0.7"/>
+
+  <!-- ===== STEP 2: UNIFORM SAMPLING ===== -->
+  <rect x="192" y="90" width="130" height="100" rx="8" fill="url(#frameGrad)" stroke="rgba(0,229,255,0.45)" stroke-width="1.5"/>
+  <text x="257" y="108" text-anchor="middle" font-family="monospace" font-size="9" fill="rgba(0,229,255,0.7)" letter-spacing="1">UNIFORM SAMPLE</text>
+  <!-- 6 mini frame boxes in 2 rows of 3 -->
+  <rect x="202" y="114" width="28" height="20" rx="2" fill="rgba(0,80,130,0.5)" stroke="rgba(0,229,255,0.4)" stroke-width="0.8"/>
+  <rect x="236" y="114" width="28" height="20" rx="2" fill="rgba(0,80,130,0.5)" stroke="rgba(0,229,255,0.4)" stroke-width="0.8"/>
+  <rect x="270" y="114" width="28" height="20" rx="2" fill="rgba(0,80,130,0.5)" stroke="rgba(0,229,255,0.4)" stroke-width="0.8"/>
+  <rect x="202" y="140" width="28" height="20" rx="2" fill="rgba(0,80,130,0.5)" stroke="rgba(0,229,255,0.4)" stroke-width="0.8"/>
+  <rect x="236" y="140" width="28" height="20" rx="2" fill="rgba(0,80,130,0.5)" stroke="rgba(0,229,255,0.4)" stroke-width="0.8"/>
+  <rect x="270" y="140" width="28" height="20" rx="2" fill="rgba(0,80,130,0.5)" stroke="rgba(0,229,255,0.4)" stroke-width="0.8"/>
+  <!-- Frame numbers -->
+  <text x="216" y="127" text-anchor="middle" font-family="monospace" font-size="7" fill="rgba(0,229,255,0.5)">F1</text>
+  <text x="250" y="127" text-anchor="middle" font-family="monospace" font-size="7" fill="rgba(0,229,255,0.5)">F2</text>
+  <text x="284" y="127" text-anchor="middle" font-family="monospace" font-size="7" fill="rgba(0,229,255,0.5)">F3</text>
+  <text x="216" y="153" text-anchor="middle" font-family="monospace" font-size="7" fill="rgba(0,229,255,0.5)">F4</text>
+  <text x="250" y="153" text-anchor="middle" font-family="monospace" font-size="7" fill="rgba(0,229,255,0.5)">F5</text>
+  <text x="284" y="153" text-anchor="middle" font-family="monospace" font-size="7" fill="rgba(0,229,255,0.5)">F6</text>
+  <text x="257" y="178" text-anchor="middle" font-family="monospace" font-size="8" fill="rgba(0,229,255,0.35)">6 frames extracted</text>
+
+  <!-- Arrow 2 -->
+  <line x1="324" y1="140" x2="362" y2="140" stroke="#00e5ff" stroke-width="1.5" marker-end="url(#arrC)" opacity="0.7"/>
+
+  <!-- ===== STEP 3: RESIZE ===== -->
+  <rect x="366" y="100" width="110" height="80" rx="8" fill="url(#frameGrad)" stroke="rgba(0,229,255,0.4)" stroke-width="1.5"/>
+  <!-- Resize icon: small rect → big rect with arrow -->
+  <rect x="380" y="118" width="24" height="18" rx="2" fill="rgba(0,100,160,0.4)" stroke="rgba(0,229,255,0.4)" stroke-width="1"/>
+  <text x="392" y="131" text-anchor="middle" font-family="monospace" font-size="6" fill="rgba(0,229,255,0.4)">orig</text>
+  <line x1="408" y1="127" x2="422" y2="127" stroke="rgba(0,229,255,0.5)" stroke-width="1" marker-end="url(#arrP)"/>
+  <rect x="426" y="113" width="32" height="28" rx="2" fill="rgba(0,80,140,0.5)" stroke="rgba(0,229,255,0.6)" stroke-width="1"/>
+  <text x="442" y="130" text-anchor="middle" font-family="monospace" font-size="6" fill="rgba(0,229,255,0.55)">224²</text>
+  <text x="421" y="162" text-anchor="middle" font-family="monospace" font-size="8" fill="rgba(0,229,255,0.5)">RESIZE</text>
+  <text x="421" y="174" text-anchor="middle" font-family="monospace" font-size="8" fill="rgba(0,229,255,0.35)">224 × 224 px</text>
+
+  <!-- SPLIT ARROW (fork) -->
+  <line x1="476" y1="140" x2="506" y2="140" stroke="#00e5ff" stroke-width="1.5" opacity="0.7"/>
+  <!-- Fork up -->
+  <line x1="506" y1="140" x2="506" y2="105" stroke="#00e5ff" stroke-width="1.5" opacity="0.7"/>
+  <line x1="506" y1="105" x2="548" y2="105" stroke="#00e5ff" stroke-width="1.5" marker-end="url(#arrP)" opacity="0.7"/>
+  <!-- Fork down -->
+  <line x1="506" y1="140" x2="506" y2="175" stroke="#aa44ff" stroke-width="1.5" opacity="0.7"/>
+  <line x1="506" y1="175" x2="548" y2="175" stroke="#aa44ff" stroke-width="1.5" marker-end="url(#arrA)" opacity="0.7"/>
+  <!-- Fork label -->
+  <text x="510" y="138" font-family="monospace" font-size="8" fill="rgba(0,229,255,0.35)">SPLIT</text>
+
+  <!-- ===== STEP 4a: PIXEL PATH ===== -->
+  <rect x="552" y="76" width="130" height="58" rx="8" fill="url(#pixelPathGrad)" stroke="rgba(0,229,255,0.55)" stroke-width="1.5"/>
+  <text x="617" y="95" text-anchor="middle" font-family="monospace" font-size="9" fill="#00e5ff" letter-spacing="1">PIXEL PATH</text>
+  <text x="617" y="111" text-anchor="middle" font-family="monospace" font-size="8" fill="rgba(0,229,255,0.55)">RGB preprocessing</text>
+  <text x="617" y="124" text-anchor="middle" font-family="monospace" font-size="8" fill="rgba(0,229,255,0.4)">InceptionResNetV2</text>
+
+  <!-- ===== STEP 4b: ASCII PATH ===== -->
+  <rect x="552" y="146" width="130" height="58" rx="8" fill="url(#asciiPathGrad)" stroke="rgba(170,68,255,0.55)" stroke-width="1.5"/>
+  <text x="617" y="165" text-anchor="middle" font-family="monospace" font-size="9" fill="#cc88ff" letter-spacing="1">ASCII PATH</text>
+  <text x="617" y="181" text-anchor="middle" font-family="monospace" font-size="8" fill="rgba(170,68,255,0.55)">Grayscale → chars</text>
+  <text x="617" y="194" text-anchor="middle" font-family="monospace" font-size="8" fill="rgba(170,68,255,0.4)">EfficientNetB4</text>
+
+  <!-- Arrows from paths to fusion -->
+  <line x1="682" y1="105" x2="720" y2="140" stroke="#00e5ff" stroke-width="1.5" marker-end="url(#arrP)" opacity="0.7"/>
+  <line x1="682" y1="175" x2="720" y2="140" stroke="#aa44ff" stroke-width="1.5" marker-end="url(#arrA)" opacity="0.7"/>
+
+  <!-- ===== STEP 5: FUSION ===== -->
+  <rect x="724" y="106" width="120" height="68" rx="8" fill="rgba(0,20,40,0.9)" stroke="rgba(0,229,255,0.6)" stroke-width="2"/>
+  <text x="784" y="130" text-anchor="middle" font-family="monospace" font-size="10" fill="#00e5ff" filter="url(#glow)">FUSION</text>
+  <text x="784" y="148" text-anchor="middle" font-family="monospace" font-size="8" fill="rgba(0,229,255,0.5)">Concat + BiLSTM</text>
+  <text x="784" y="163" text-anchor="middle" font-family="monospace" font-size="8" fill="rgba(0,229,255,0.35)">128 units</text>
+
+  <!-- Arrow to output -->
+  <line x1="844" y1="140" x2="882" y2="140" stroke="#00ff88" stroke-width="1.5" marker-end="url(#arrG)" opacity="0.8"/>
+
+  <!-- ===== OUTPUT ===== -->
+  <rect x="886" y="92" width="186" height="96" rx="8" fill="url(#outGrad)" stroke="rgba(0,255,136,0.5)" stroke-width="1.5"/>
+  <text x="979" y="114" text-anchor="middle" font-family="monospace" font-size="9" fill="#00ff88" letter-spacing="1">OUTPUT</text>
+  <!-- Real/Fake gauge -->
+  <rect x="906" y="122" width="140" height="14" rx="7" fill="rgba(0,0,0,0.4)" stroke="rgba(255,255,255,0.1)" stroke-width="0.5"/>
+  <!-- Fake side -->
+  <rect x="906" y="122" width="50" height="14" rx="7" fill="rgba(255,34,68,0.5)"/>
+  <!-- Real side -->
+  <rect x="996" y="122" width="50" height="14" rx="7" fill="rgba(0,255,136,0.5)"/>
+  <text x="931" y="132" text-anchor="middle" font-family="monospace" font-size="7" fill="rgba(255,100,120,0.9)">FAKE</text>
+  <text x="1021" y="132" text-anchor="middle" font-family="monospace" font-size="7" fill="rgba(0,255,136,0.9)">REAL</text>
+  <!-- Pointer -->
+  <line x1="979" y1="122" x2="979" y2="110" stroke="#fff" stroke-width="1.5" opacity="0.6"/>
+  <circle cx="979" cy="122" r="4" fill="white" opacity="0.8"/>
+  <text x="979" y="152" text-anchor="middle" font-family="monospace" font-size="8" fill="rgba(0,255,136,0.55)">video score + 6 frame scores</text>
+  <text x="979" y="165" text-anchor="middle" font-family="monospace" font-size="7" fill="rgba(0,255,136,0.35)">threshold ≥ 0.5 → REAL</text>
+  <text x="979" y="208" text-anchor="middle" font-family="monospace" font-size="8" fill="rgba(0,255,136,0.35)">CLASSIFICATION</text>
+
+  <!-- Step labels at bottom -->
+  <text x="88"  y="228" text-anchor="middle" font-family="monospace" font-size="8" fill="rgba(0,229,255,0.3)" letter-spacing="1">① INPUT</text>
+  <text x="257" y="228" text-anchor="middle" font-family="monospace" font-size="8" fill="rgba(0,229,255,0.3)" letter-spacing="1">② SAMPLE</text>
+  <text x="421" y="228" text-anchor="middle" font-family="monospace" font-size="8" fill="rgba(0,229,255,0.3)" letter-spacing="1">③ RESIZE</text>
+  <text x="617" y="228" text-anchor="middle" font-family="monospace" font-size="8" fill="rgba(0,229,255,0.3)" letter-spacing="1">④ ENCODE</text>
+  <text x="784" y="228" text-anchor="middle" font-family="monospace" font-size="8" fill="rgba(0,229,255,0.3)" letter-spacing="1">⑤ FUSE</text>
+  <text x="979" y="228" text-anchor="middle" font-family="monospace" font-size="8" fill="rgba(0,229,255,0.3)" letter-spacing="1">⑥ PREDICT</text>
+
+  <!-- Bottom divider line -->
+  <line x1="50" y1="236" x2="1050" y2="236" stroke="rgba(0,229,255,0.07)" stroke-width="0.5"/>
+  <!-- Timing bar -->
+  <rect x="50" y="244" width="1000" height="4" rx="2" fill="rgba(0,229,255,0.05)"/>
+  <rect x="50" y="244" width="120" height="4" rx="2" fill="rgba(0,229,255,0.2)"/>
+  <rect x="170" y="244" width="160" height="4" rx="2" fill="rgba(0,229,255,0.3)"/>
+  <rect x="330" y="244" width="115" height="4" rx="2" fill="rgba(0,229,255,0.2)"/>
+  <rect x="445" y="244" width="210" height="4" rx="2" fill="rgba(0,150,255,0.35)"/>
+  <rect x="655" y="244" width="140" height="4" rx="2" fill="rgba(0,100,200,0.3)"/>
+  <rect x="795" y="244" width="255" height="4" rx="2" fill="rgba(0,255,136,0.3)"/>
+  <text x="550" y="260" text-anchor="middle" font-family="monospace" font-size="7" fill="rgba(0,229,255,0.25)" letter-spacing="2">INFERENCE PIPELINE · CACHED FRAMES ACCELERATED</text>
+</svg>

@@ -1,0 +1,157 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 320" width="900" height="320">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#060c18"/>
+      <stop offset="100%" style="stop-color:#0a0f1e"/>
+    </linearGradient>
+    <linearGradient id="frameLeft" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#003355"/>
+      <stop offset="100%" style="stop-color:#001a33"/>
+    </linearGradient>
+    <linearGradient id="asciiRight" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a0033"/>
+      <stop offset="100%" style="stop-color:#0d0022"/>
+    </linearGradient>
+    <pattern id="dots" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
+      <circle cx="10" cy="10" r="0.6" fill="rgba(0,229,255,0.05)"/>
+    </pattern>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="2.5" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <marker id="arrC" markerWidth="7" markerHeight="5" refX="6" refY="2.5" orient="auto">
+      <polygon points="0 0, 7 2.5, 0 5" fill="#00e5ff" opacity="0.8"/>
+    </marker>
+  </defs>
+
+  <rect width="900" height="320" rx="12" fill="url(#bg)"/>
+  <rect width="900" height="320" rx="12" fill="url(#dots)"/>
+  <rect x="1" y="1" width="898" height="318" rx="12" fill="none" stroke="rgba(170,68,255,0.25)" stroke-width="1"/>
+
+  <!-- Title -->
+  <text x="450" y="30" text-anchor="middle" font-family="'Arial Black', sans-serif" font-size="13" font-weight="900" fill="#cc88ff" filter="url(#glow)" letter-spacing="4">ASCII ART CONVERSION</text>
+  <text x="450" y="46" text-anchor="middle" font-family="monospace" font-size="9" fill="rgba(170,68,255,0.5)" letter-spacing="2">HOW PIXEL FRAMES BECOME STRUCTURAL FINGERPRINTS</text>
+  <line x1="60" y1="54" x2="840" y2="54" stroke="rgba(170,68,255,0.12)" stroke-width="0.5"/>
+
+  <!-- LEFT PANEL: Original frame mockup -->
+  <rect x="40" y="66" width="230" height="200" rx="8" fill="url(#frameLeft)" stroke="rgba(0,229,255,0.4)" stroke-width="1.5"/>
+
+  <!-- Simulated face frame - background -->
+  <rect x="52" y="78" width="206" height="176" rx="4" fill="#001a33"/>
+  <!-- Sky/background gradient fill -->
+  <rect x="52" y="78" width="206" height="80" rx="4" fill="rgba(0,40,80,0.6)"/>
+  <!-- Face oval - skin tone -->
+  <ellipse cx="155" cy="155" rx="60" ry="75" fill="#8B6914" opacity="0.7"/>
+  <!-- Hair -->
+  <ellipse cx="155" cy="100" rx="65" ry="45" fill="#1a0a00" opacity="0.9"/>
+  <!-- Eyes -->
+  <ellipse cx="135" cy="145" rx="12" ry="8" fill="white" opacity="0.9"/>
+  <ellipse cx="175" cy="145" rx="12" ry="8" fill="white" opacity="0.9"/>
+  <circle cx="138" cy="145" r="5" fill="#1a0a05"/>
+  <circle cx="178" cy="145" r="5" fill="#1a0a05"/>
+  <!-- Nose -->
+  <path d="M 150 155 L 145 175 L 155 175 L 160 175 L 150 175" fill="rgba(0,0,0,0.3)" stroke="#5a3a00" stroke-width="1.5" fill="none"/>
+  <!-- Mouth -->
+  <path d="M 135 190 Q 155 202 175 190" fill="none" stroke="#5a1a1a" stroke-width="2.5"/>
+  <!-- Neck -->
+  <rect x="135" y="218" width="40" height="30" rx="2" fill="#7a5510" opacity="0.6"/>
+
+  <!-- Pixel grid overlay to show manipulation detection area -->
+  <g opacity="0.25">
+    <line x1="52" y1="98" x2="258" y2="98" stroke="#ff2244" stroke-width="0.5"/>
+    <line x1="52" y1="118" x2="258" y2="118" stroke="#ff2244" stroke-width="0.5"/>
+    <line x1="52" y1="138" x2="258" y2="138" stroke="#ff2244" stroke-width="0.5"/>
+    <line x1="52" y1="158" x2="258" y2="158" stroke="#ff2244" stroke-width="0.5"/>
+    <line x1="52" y1="178" x2="258" y2="178" stroke="#ff2244" stroke-width="0.5"/>
+    <line x1="52" y1="198" x2="258" y2="198" stroke="#ff2244" stroke-width="0.5"/>
+    <line x1="72" y1="78" x2="72" y2="254" stroke="#ff2244" stroke-width="0.5"/>
+    <line x1="92" y1="78" x2="92" y2="254" stroke="#ff2244" stroke-width="0.5"/>
+    <line x1="112" y1="78" x2="112" y2="254" stroke="#ff2244" stroke-width="0.5"/>
+    <line x1="132" y1="78" x2="132" y2="254" stroke="#ff2244" stroke-width="0.5"/>
+    <line x1="152" y1="78" x2="152" y2="254" stroke="#ff2244" stroke-width="0.5"/>
+    <line x1="172" y1="78" x2="172" y2="254" stroke="#ff2244" stroke-width="0.5"/>
+    <line x1="192" y1="78" x2="192" y2="254" stroke="#ff2244" stroke-width="0.5"/>
+    <line x1="212" y1="78" x2="212" y2="254" stroke="#ff2244" stroke-width="0.5"/>
+    <line x1="232" y1="78" x2="232" y2="254" stroke="#ff2244" stroke-width="0.5"/>
+  </g>
+
+  <text x="155" y="285" text-anchor="middle" font-family="monospace" font-size="9" fill="rgba(0,229,255,0.5)" letter-spacing="1">ORIGINAL FRAME (224×224)</text>
+
+  <!-- MIDDLE: conversion steps -->
+  <!-- Step 1: Grayscale arrow -->
+  <line x1="272" y1="155" x2="310" y2="155" stroke="#00e5ff" stroke-width="1.5" marker-end="url(#arrC)" opacity="0.7"/>
+  <text x="291" y="146" text-anchor="middle" font-family="monospace" font-size="7" fill="rgba(0,229,255,0.5)">①</text>
+  <text x="291" y="170" text-anchor="middle" font-family="monospace" font-size="7" fill="rgba(0,229,255,0.35)">grayscale</text>
+
+  <!-- Grayscale mini frame -->
+  <rect x="313" y="105" width="80" height="100" rx="4" fill="#050d18" stroke="rgba(0,229,255,0.3)" stroke-width="1"/>
+  <!-- Grayscale content: simple gradient blocks -->
+  <rect x="315" y="107" width="76" height="35" rx="2" fill="rgba(30,30,40,0.8)"/>
+  <ellipse cx="353" cy="162" rx="28" ry="32" fill="rgba(120,120,100,0.4)"/>
+  <ellipse cx="353" cy="130" rx="30" ry="18" fill="rgba(20,20,25,0.9)"/>
+  <!-- Grayscale eyes -->
+  <ellipse cx="341" cy="152" rx="7" ry="5" fill="rgba(200,200,200,0.7)"/>
+  <ellipse cx="363" cy="152" rx="7" ry="5" fill="rgba(200,200,200,0.7)"/>
+  <circle cx="343" cy="152" r="3" fill="rgba(20,20,20,0.9)"/>
+  <circle cx="365" cy="152" r="3" fill="rgba(20,20,20,0.9)"/>
+  <text x="353" y="220" text-anchor="middle" font-family="monospace" font-size="8" fill="rgba(0,229,255,0.35)">GRAYSCALE</text>
+
+  <!-- Step 2: intensity mapping -->
+  <line x1="395" y1="155" x2="428" y2="155" stroke="#cc88ff" stroke-width="1.5" opacity="0.7"/>
+  <polygon points="421,151 429,155 421,159" fill="#cc88ff" opacity="0.7"/>
+  <text x="411" y="146" text-anchor="middle" font-family="monospace" font-size="7" fill="rgba(170,68,255,0.5)">②</text>
+  <text x="411" y="170" text-anchor="middle" font-family="monospace" font-size="7" fill="rgba(170,68,255,0.35)">map chars</text>
+
+  <!-- Intensity scale -->
+  <rect x="430" y="68" width="18" height="174" rx="3" fill="rgba(0,0,0,0.5)" stroke="rgba(170,68,255,0.3)" stroke-width="0.8"/>
+  <rect x="431" y="69"  width="16" height="24" rx="1" fill="#000010"/>
+  <rect x="431" y="93"  width="16" height="24" rx="1" fill="#060618"/>
+  <rect x="431" y="117" width="16" height="24" rx="1" fill="#111130"/>
+  <rect x="431" y="141" width="16" height="24" rx="1" fill="#2a2a55"/>
+  <rect x="431" y="165" width="16" height="24" rx="1" fill="#5555aa"/>
+  <rect x="431" y="189" width="16" height="24" rx="1" fill="#aaaadd"/>
+  <rect x="431" y="213" width="16" height="23" rx="1" fill="#e0e0f0"/>
+  <text x="449" y="80"  font-family="monospace" font-size="7" fill="rgba(170,68,255,0.5)">@</text>
+  <text x="449" y="104" font-family="monospace" font-size="7" fill="rgba(170,68,255,0.5)">%</text>
+  <text x="449" y="128" font-family="monospace" font-size="7" fill="rgba(170,68,255,0.5)">#</text>
+  <text x="449" y="152" font-family="monospace" font-size="7" fill="rgba(170,68,255,0.5)">+</text>
+  <text x="449" y="176" font-family="monospace" font-size="7" fill="rgba(170,68,255,0.5)">=</text>
+  <text x="449" y="200" font-family="monospace" font-size="7" fill="rgba(170,68,255,0.5)">-</text>
+  <text x="449" y="224" font-family="monospace" font-size="7" fill="rgba(170,68,255,0.5)"> </text>
+  <text x="439" y="254" text-anchor="middle" font-family="monospace" font-size="7" fill="rgba(170,68,255,0.35)">INTENSITY</text>
+  <text x="439" y="263" text-anchor="middle" font-family="monospace" font-size="7" fill="rgba(170,68,255,0.25)">SCALE</text>
+
+  <!-- RIGHT PANEL: ASCII output -->
+  <rect x="472" y="66" width="390" height="200" rx="8" fill="url(#asciiRight)" stroke="rgba(170,68,255,0.55)" stroke-width="1.5"/>
+  <text x="667" y="84" text-anchor="middle" font-family="monospace" font-size="9" fill="rgba(170,68,255,0.6)" letter-spacing="1">ASCII REPRESENTATION</text>
+
+  <!-- ASCII art content - representing a face -->
+  <text x="487" y="102" font-family="monospace" font-size="7" fill="rgba(170,68,255,0.25)">@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@</text>
+  <text x="487" y="112" font-family="monospace" font-size="7" fill="rgba(170,68,255,0.28)">@@@@@@@@@@##########%%%%####@@@@@@@@@@@@@@@@</text>
+  <text x="487" y="122" font-family="monospace" font-size="7" fill="rgba(170,68,255,0.32)">@@@@@@@#####++++++++++++++####@@@@@@@@@@@@@@</text>
+  <text x="487" y="132" font-family="monospace" font-size="7" fill="rgba(170,68,255,0.38)">@@@@@@##++==============+++++##@@@@@@@@@@@@@</text>
+  <text x="487" y="142" font-family="monospace" font-size="7" fill="rgba(170,68,255,0.42)">@@@@@#++==--          --===++++#@@@@@@@@@@@@</text>
+  <text x="487" y="152" font-family="monospace" font-size="7" fill="rgba(170,68,255,0.55)">@@@@#+=--   @@##  ##@@   --=++#@@@@@@@@@@@@@</text>
+  <text x="487" y="162" font-family="monospace" font-size="7" fill="rgba(170,68,255,0.65)">@@@@#+=     @%#.  .#%@    -=+##@@@@@@@@@@@@@</text>
+  <text x="487" y="172" font-family="monospace" font-size="7" fill="rgba(170,68,255,0.60)">@@@@#+=--   @@##  ##@@   --=++#@@@@@@@@@@@@@</text>
+  <text x="487" y="182" font-family="monospace" font-size="7" fill="rgba(170,68,255,0.50)">@@@@##+==-          ----===+++##@@@@@@@@@@@@</text>
+  <text x="487" y="192" font-family="monospace" font-size="7" fill="rgba(170,68,255,0.45)">@@@@@##+==  ..----..  ==+++####@@@@@@@@@@@@@</text>
+  <text x="487" y="202" font-family="monospace" font-size="7" fill="rgba(170,68,255,0.40)">@@@@@###+++-   --   -=++++####@@@@@@@@@@@@@@</text>
+  <text x="487" y="212" font-family="monospace" font-size="7" fill="rgba(170,68,255,0.38)">@@@@@@####++++++++++++++#####@@@@@@@@@@@@@@@</text>
+  <text x="487" y="222" font-family="monospace" font-size="7" fill="rgba(170,68,255,0.30)">@@@@@@@@@#################@@@@@@@@@@@@@@@@@@</text>
+  <text x="487" y="232" font-family="monospace" font-size="7" fill="rgba(170,68,255,0.22)">@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@</text>
+  <text x="487" y="242" font-family="monospace" font-size="7" fill="rgba(170,68,255,0.15)">@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@</text>
+  <text x="487" y="252" font-family="monospace" font-size="7" fill="rgba(170,68,255,0.10)">@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@</text>
+
+  <!-- highlight box on manipulation boundary -->
+  <rect x="543" y="145" width="180" height="34" rx="2" fill="none" stroke="rgba(255,34,68,0.6)" stroke-width="1" stroke-dasharray="3,2"/>
+  <text x="830" y="152" text-anchor="end" font-family="monospace" font-size="7" fill="rgba(255,34,68,0.6)">← manipulation</text>
+  <text x="830" y="162" text-anchor="end" font-family="monospace" font-size="7" fill="rgba(255,34,68,0.5)">  artifact zone</text>
+
+  <!-- label at bottom of ASCII panel -->
+  <text x="667" y="285" text-anchor="middle" font-family="monospace" font-size="9" fill="rgba(170,68,255,0.5)" letter-spacing="1">ASCII OUTPUT → EfficientNetB4 Input</text>
+
+  <!-- Insight box -->
+  <rect x="40" y="298" width="820" height="16" rx="4" fill="rgba(0,10,25,0.6)"/>
+  <text x="450" y="310" text-anchor="middle" font-family="monospace" font-size="8" fill="rgba(170,68,255,0.4)" letter-spacing="1">INSIGHT: Deepfake boundaries appear as unnatural character transitions — exposing GAN artifacts invisible in raw pixels</text>
+</svg>
